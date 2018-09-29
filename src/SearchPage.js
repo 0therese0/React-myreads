@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 
 class SearchPage extends Component {
+	state = {
+		query: ''
+	}
+
+	updateQuery = (query) => {
+		this.setState({
+			query: query
+		})
+	}
+
+	updateQ
 	render () {
 		return (
 			<div className="search-books">
@@ -18,7 +29,13 @@ class SearchPage extends Component {
 					you don't find a specific author or title. Every search is limited by search terms.
 					*/}
 
-						<input type="text" placeholder="Search by title or author"/>
+						<input
+							type="text"
+							placeholder="Search by title or author"
+							value={this.state.query}
+							onChange={(event) => this.updateQuery(event.target.value)}
+						/>
+
 					</div>
 				</div>
 
