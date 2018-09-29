@@ -3,6 +3,7 @@ import Book from './Book';
 
 class MainPage extends Component {
 	render () {
+		console.log(this.props.books)
 		return (
 			<div className="list-books">
 				<div className="list-books-title">
@@ -20,9 +21,13 @@ class MainPage extends Component {
 												.filter(book => book.shelf === 'currentlyReading')
 												.map(book => (
 													<li key={book.id} >
-														<Book />
+														<Book
+															book={book}
+															updateShelf={this.props.updateShelf}
+															// currentShelf="currentlyReading"
+														/>
 													</li>
-												))
+											))
 										}
 									</ol>
 								</div>
@@ -37,9 +42,13 @@ class MainPage extends Component {
 												.filter(book => book.shelf === 'wantToRead')
 												.map(book => (
 													<li key={book.id} >
-														<Book />
+														<Book
+															book={book}
+															updateShelf={this.props.updateShelf}
+															// currentShelf="wantToRead"
+														/>
 													</li>
-												))
+											))
 										}
 									</ol>
 								</div>
@@ -54,9 +63,13 @@ class MainPage extends Component {
 												.filter(book => book.shelf === 'read')
 												.map(book => (
 													<li key={book.id} >
-														<Book />
+														<Book
+															book={book}
+															updateShelf={this.props.updateShelf}
+															// currentShelf="read"
+														/>
 													</li>
-												))
+											))
 										}
 									</ol>
 								</div>
