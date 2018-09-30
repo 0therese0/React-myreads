@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
+
 import Book from './Book';
+
 import * as BooksAPI from './BooksAPI';
+
 import { Link } from 'react-router-dom';
 
 class SearchPage extends Component {
+	// Set state for search
 	state = {
 		query: '',
 		searchedBooks: []
-	}
+	};
 
 	updateQuery = (query) => {
 		this.setState({
 			query: query
-		})
+		});
 		this.updateSearchedBooks(query);
-	}
+	};
 
 // Updates books on Search Page
 	updateSearchedBooks = (query) => {
@@ -25,8 +29,7 @@ class SearchPage extends Component {
 				} else {
 					this.setState({ searchedBooks: searchedBooks });
 				}
-				this.setState({ searchedBooks: searchedBooks })
-			})
+			});
 		} else {
 			this.setState({ searchedBooks: [] });
 		}
@@ -69,7 +72,7 @@ class SearchPage extends Component {
 											currentShelf={shelf}
 										/>
 									</li>
-								)
+								);
 							})
 						}
 					</ol>
