@@ -67,7 +67,7 @@ class MainPage extends Component {
 														<Book
 															book={book}
 															updateShelf={this.props.updateShelf}
-															// currentShelf="read"
+															currentShelf="read"
 														/>
 													</li>
 											))
