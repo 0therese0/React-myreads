@@ -37,7 +37,9 @@ class BooksApp extends React.Component {
           books={this.state.books}
           updateShelf={this.updateShelf}
         /> */}
-        <SearchPage />
+        <SearchPage
+          updateShelf={this.updateShelf}
+        />
       </div>
     );
   }
