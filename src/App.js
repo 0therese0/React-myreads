@@ -24,13 +24,6 @@ class BooksApp extends React.Component {
   }
 
   // Update book shelves when given option is clicked
-  // updateShelf = (book, shelf) => {
-  //   BooksAPI.update(book, shelf);
-  //   BooksAPI.getAll().then((library) => {
-  //     this.setState({ library })
-  //   });
-  // }
-
   updateShelf = (book, shelf) => {
     BooksAPI.update(book, shelf).then(response => {
       BooksAPI.getAll().then((library) => { this.setState({ library })
