@@ -15,6 +15,7 @@ class MainPage extends Component {
 
 				<div className="list-books-content">
 					<div>
+
 						<div className="bookshelf">
 							<h2 className="bookshelf-title">Currently Reading</h2>
 								<div className="bookshelf-books">
@@ -33,6 +34,29 @@ class MainPage extends Component {
 											)
 										}
 									</ol>
+								</div>
+							</div>
+
+							<div className="bookshelf">
+							<h2 className="bookshelf-title">Want To Read</h2>
+								<div className="bookshelf-books">
+									<ol className="books-grid">
+										{
+											this.props.library.filter
+											(book => book.shelf === 'wantToRead')
+											.map(book =>
+												<li key={book.id}>
+													<Book
+														book={book}
+														updateShelf={this.props.updateShelf}
+														currentShelf="wantToRead"
+													/>
+												</li>
+											)
+										}
+									</ol>
+								</div>
+							</div>
 
 						<Shelf
 							name={"Want to Read"}
