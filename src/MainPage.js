@@ -20,7 +20,6 @@ class MainPage extends Component {
 							books={this.props.library.filter(
 								book => book.shelf === "currentlyReading"
 							)}
-
 							updateShelf={this.props.updateShelf}
 						/>
 
@@ -29,7 +28,6 @@ class MainPage extends Component {
 							books={this.props.library.filter(
 								book => book.shelf === "wantToRead"
 							)}
-
 							updateShelf={this.props.updateShelf}
 						/>
 
@@ -38,7 +36,6 @@ class MainPage extends Component {
 							books={this.props.library.filter(
 								book => book.shelf === "read"
 							)}
-
 							updateShelf={this.props.updateShelf}
 						/>
 					</div>
