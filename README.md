@@ -1,6 +1,6 @@
 # MyReads Project
 
-This is Project 6 in Udacity's Front End Nano Degree Program, created with React.  Users can add and remove books to each category or shelf by clicking add button '+' on the lower left of the main page.  Main page contains three shelves: Currently Reading, Want to Read and Read.  Users can categorize books to different shelves by click arrow down button on lower left of each book.
+This is Project 6 in Udacity's Front End Nano Degree Program, created with React.  Users can add and remove books to each category or shelf by clicking add button '+' on the lower left of the main page.  Main page contains three shelves: "Currently Reading", "Want to Read" and "Read".  Users can categorize books to different shelves by click arrow down button on lower left of each book.
 
 ## Installation
 
