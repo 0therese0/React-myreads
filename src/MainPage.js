@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
-// import Book from './Book';
-
 import { Link } from 'react-router-dom';
 import Shelf from './Shelf';
 
 class MainPage extends Component {
+	// Render HTML
 	render () {
 		return (
 			<div className="list-books">
