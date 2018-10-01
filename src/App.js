@@ -19,7 +19,7 @@ class BooksApp extends React.Component {
   // Get books from BooksAPI
   componentDidMount() {
     BooksAPI.getAll().then((library) => {
-      this.setState({ library: library })
+      this.setState({ library })
     });
   }
 
@@ -27,7 +27,7 @@ class BooksApp extends React.Component {
   updateShelf = (book, shelf) => {
     BooksAPI.update(book, shelf);
     BooksAPI.getAll().then((library) => {
-      this.setState({ library: library })
+      this.setState({ library })
     });
   }
 
@@ -36,8 +36,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
 
-        <Route
-          exact path="/"
+        <Route exact path="/"
           render={() => (
             <MainPage
               library={this.state.library}
@@ -46,12 +45,11 @@ class BooksApp extends React.Component {
           )}
         />
 
-        <Route
-          exact path="/search"
+        <Route exact path="/search"
           render={() => (
             <SearchPage
-              updateShelf={this.updateShelf}
               library={this.state.library}
+              updateShelf={this.updateShelf}
             />
           )}
         />

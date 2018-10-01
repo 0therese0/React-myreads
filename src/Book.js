@@ -20,7 +20,7 @@ class Book extends Component {
 
 					<div className="book-shelf-changer">
 						<select
-							onChange={(event) =>
+							onChange= {(event) =>
 								this.props.updateShelf (
 								this.props.book, event.target.value
 							)}
