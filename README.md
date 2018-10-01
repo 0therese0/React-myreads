@@ -27,6 +27,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
    * Udacity Books API
 
 ## Resources
-  * [List of Resources] (https://www.diigo.com/outliner/fkkvtl/Udacity-MyReads%3A-My-Reads%3A-Book-Tracking-App-Project-(project-%236)?key=4sfz2eik4g)
+  * [List of Resources](https://www.diigo.com/outliner/fkkvtl/Udacity-MyReads%3A-My-Reads%3A-Book-Tracking-App-Project-(project-%236)?key=4sfz2eik4g)
   * Udacity's Slack discussions
   * Udacity's Front-End Nanodegree Program
