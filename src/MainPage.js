@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import Shelf from './Shelf';
+import Book from './Book';
+
 
 class MainPage extends Component {
 	// Render HTML
@@ -21,8 +22,8 @@ class MainPage extends Component {
 								<div className="bookshelf-books">
 									<ol className="books-grid">
 										{
-											this.props.library.filter
-											(book => book.shelf === 'currentlyReading')
+											this.props.library
+											.filter(book => book.shelf === 'currentlyReading')
 											.map(book =>
 												<li key={book.id}>
 													<Book
@@ -30,6 +31,7 @@ class MainPage extends Component {
 														updateShelf={this.props.updateShelf}
 														currentShelf="currentlyReading"
 													/>
+													updateShelf=(book.shelf);
 												</li>
 											)
 										}
@@ -42,8 +44,8 @@ class MainPage extends Component {
 								<div className="bookshelf-books">
 									<ol className="books-grid">
 										{
-											this.props.library.filter
-											(book => book.shelf === 'wantToRead')
+											this.props.library
+											.filter(book => book.shelf === 'wantToRead')
 											.map(book =>
 												<li key={book.id}>
 													<Book
@@ -51,6 +53,7 @@ class MainPage extends Component {
 														updateShelf={this.props.updateShelf}
 														currentShelf="wantToRead"
 													/>
+													updateShelf=(book.shelf);
 												</li>
 											)
 										}
@@ -58,23 +61,29 @@ class MainPage extends Component {
 								</div>
 							</div>
 
-						<Shelf
-							name={"Want to Read"}
-							books={this.props.library.filter(
-								book => book.shelf === "wantToRead"
-							)}
-							updateShelf={this.props.updateShelf}
-						/>
-
-						<Shelf
-							name={"Read"}
-							books={this.props.library.filter(
-								book => book.shelf === "read"
-							)}
-							updateShelf={this.props.updateShelf}
-						/>
+							<div className="bookshelf">
+							<h2 className="bookshelf-title">Read</h2>
+								<div className="bookshelf-books">
+									<ol className="books-grid">
+										{
+											this.props.library
+											.filter(book => book.shelf === 'read')
+											.map(book =>
+												<li key={book.id}>
+													<Book
+														book={book}
+														updateShelf={this.props.updateShelf}
+														currentShelf="read"
+													/>
+													updateShelf=(book.shelf);
+												</li>
+											)
+										}
+									</ol>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
 
 				<div className="open-search">
 					<Link
