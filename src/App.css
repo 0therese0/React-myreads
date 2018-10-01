@@ -16,9 +16,9 @@ body, .app {
   text-align: center;
 }
 .list-books-title h1 {
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
-  color: white;
+  color: rosybrown;
 }
 
 .list-books-content {
@@ -125,12 +125,14 @@ body, .app {
 .book-title,
 .book-authors {
   font-size: 0.8em;
+  font-weight: bold;
+  color: darkslateblue;
 }
 .book-title {
   margin-top: 10px;
 }
 .book-authors {
-  color: #999;
+  color: darksalmon;
 }
 
 .book-top {
