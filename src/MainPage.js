@@ -15,13 +15,24 @@ class MainPage extends Component {
 
 				<div className="list-books-content">
 					<div>
-						<Shelf
-							name={"Currently Reading"}
-							books={this.props.library.filter(
-								book => book.shelf === "currentlyReading"
-							)}
-							updateShelf={this.props.updateShelf}
-						/>
+						<div className="bookshelf">
+							<h2 className="bookshelf-title">Currently Reading</h2>
+								<div className="bookshelf-books">
+									<ol className="books-grid">
+										{
+											this.props.library.filter
+											(book => book.shelf === 'currentlyReading')
+											.map(book =>
+												<li key={book.id}>
+													<Book
+														book={book}
+														updateShelf={this.props.updateShelf}
+														currentShelf="currentlyReading"
+													/>
+												</li>
+											)
+										}
+									</ol>
 
 						<Shelf
 							name={"Want to Read"}
