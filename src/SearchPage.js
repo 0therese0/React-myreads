@@ -35,6 +35,7 @@ class SearchPage extends Component {
 		}
 	}
 
+	// Render HTML
 	render () {
 		return (
 			<div className="search-books">
