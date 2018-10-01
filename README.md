@@ -9,7 +9,7 @@ To get started
 * Navigate to project folder on your computer
 * Install dependencies with `npm install`
 * Start the development server with `npm start`
-* If no browser is opened after previous step, type `localhost:3000` to view project
+* Type `localhost:3000` on your choice of browser to view project, if none is opened after previous step.
 
 ## Important
 
