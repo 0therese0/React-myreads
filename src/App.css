@@ -136,7 +136,7 @@ body, .app {
 
 h2 {
   font-size: 22px;
-  border-bottom: 1px solid darkslateblue;
+  border-bottom: 2px solid darkslateblue;
 }
 .book-authors {
   color: darkslateblue;
