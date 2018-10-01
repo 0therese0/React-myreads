@@ -123,22 +123,23 @@ body, .app {
 .book {
   width: 140px;
 }
-.book-title,
+
 .book-authors {
-  font-size: 0.8em;
-  font-weight: bold;
+  font-size: 15px;
   color: darkslateblue;
 }
 .book-title {
+  font-weight: bold;
+  color: slateblue;
   margin-top: 10px;
 }
 
 h2 {
-  font-size: 10px;
+  font-size: 22px;
   border-bottom: 1px solid darkslateblue;
 }
 .book-authors {
-  color: darksalmon;
+  color: darkslateblue;
 }
 
 .book-top {
